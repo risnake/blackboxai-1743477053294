@@ -1,0 +1,35 @@
+/* Custom styles that extend Tailwind */
+@layer components {
+    .btn {
+        @apply px-6 py-3 rounded-md font-medium transition;
+    }
+    .btn-primary {
+        @apply bg-indigo-600 text-white hover:bg-indigo-700;
+    }
+    .btn-secondary {
+        @apply bg-white text-indigo-600 hover:bg-gray-100;
+    }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Rotate transition */
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .hero-content {
+        padding-top: 4rem;
+    }
+}
